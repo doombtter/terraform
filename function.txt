@@ -1,0 +1,18 @@
+basename(path) : return file
+coalesce(value1, value2), coalescelist(list1, list2) : return non empty value
+element(list, index) : return list[index]
+format(formet, args), formatlist() : return format
+index(list, element) : return finds element
+join(delimiter, list) : return all list
+list(...) : return create new list
+lookup(map, key, [default]) : return lookup key on map
+lower() : return lowercase
+upper() : return uppercase
+map(k, v, ...) : return new map
+merge(map1, map2) : return merge maps
+replace(string, search, replace) : return replace string
+split(delimiter, string) : return split list
+substr(string, offset, length) : return substring
+timestamp() : return RFC 3339 timestamp
+uuid() : return uuid
+value(map) : return values of map
