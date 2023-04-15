@@ -1,0 +1,11 @@
+.terraform.lock.hcl
+공급자 종속성 잠금 파일
+사용중인 공급자와 모듈의 버전 추적
+
+terraform{
+    required_providers{
+
+    }
+}
+
+lockfile 제거시 모든 공급자 최신화
