@@ -1,0 +1,7 @@
+terraform state list : 리소스 상태를 나열
+terraform state mv : rename 혹은 상태 이동
+terraform state pull : 전체 상태 표기
+terraform state push : 로컬 파일에서 상태 파일로 재정의
+terraform state replace-provider : 공급자 이름 변경
+terraform state rm : 상태 파일에서 해당 리소스 제거 (aws는 제거되지 않음) 
+terraform state show : 상태에 있는 항목을 표시
