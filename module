@@ -1,0 +1,40 @@
+ecs cluster ecs + cloudwatch + iam + security groups + autoscaling
+ecs service ecs service + ecs service template + alb target group
+alb rule
+alb alb security group + acm certificate + aws alb + http listener + https listener
+
+in41it / terraform-modules
+
+variable "conditions" {
+    description = "ALB rule conditions"
+    default = []
+    type = list(object({
+        field = string
+        values = list(string)
+    }))
+}
+
+resource "aws_lb_listener_rule" "alb_rule" {
+    [...]
+    dynamic condition {
+        for_each = var.conditions
+        content {
+            dynamic host_header {
+                for_each = condition.value.field == "host_header" ? [1] : []
+                content {
+                    values = condition.value.values
+                }
+            }
+        }
+    }
+}
+
+count = [0,1,2]
+for_each = ["unique1", "unique2", "unique3"]
+
+count = ["instance1", "instance2", "instance3"] =
+[0,1,2]
+중간에서 빠진다면 해결을 재구성하거나
+terraform state mv를 사용해야함
+
+단점을 해소하기 위해서 for_each사용
