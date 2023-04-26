@@ -1,0 +1,44 @@
+관리형 쿠버네티스 마스터 노드
+
+scale automatically
+multi-AZ
+
+작은 환경에선 ECS가 더 저렴
+ECS보다 더욱 복잡
+시간당 비용 청구
+
+1. EKS 클러스터 프로비저닝
+
+EKS Cluster
+IAM Roles
+Security Groups
+VPC
+
+2. 작업자 노드 배포
+
+Launch Configuration
+Autoscaling Group
+IAM Rols
+Security Groups
+
+3. EKS에 연결
+
+~/.kube/config
+ConfigMap
+kubectl
+Heptio auth + IAM > token
+
+eks-cluster
+eks-workers
+external-ip
+iam-workers
+iam
+outputs
+providers
+vars
+versions
+vpc
+Securitygroups
+Securitygroups-workers
+
+연결하게해주는 kubeconfig 설정 output
